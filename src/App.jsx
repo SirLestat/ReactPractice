@@ -10,7 +10,7 @@ export default function App() {
 
   const agregarPelicula = () => {
     setListaPeliculas((prevPeliculas) => [...prevPeliculas, pelicula]);
-    setPelicula('')
+    setPelicula("");
   };
 
   return (
@@ -26,9 +26,9 @@ export default function App() {
       <button onClick={agregarPelicula}>Agregar Película</button>
 
       <ul style={{ listStyle: "none" }}>
-        {ListaPeliculas.map((pelicula) => {
-          return <li key={pelicula}>{pelicula}</li>;
-        })}
+        {ListaPeliculas.map((pelicula) => (
+          <li key={pelicula}>{pelicula}</li>
+        ))}
       </ul>
     </div>
   );
