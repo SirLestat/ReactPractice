@@ -17,9 +17,7 @@ export default function FormularioSimple() {
   };
 
   const eliminarNombre = (nombreAEliminar) => {
-    const nuevosNombres = listaNombres.filter(
-      (nombre) => nombre !== nombreAEliminar
-    );
+    const nuevosNombres = listaNombres.filter((nombre) => nombre !== nombreAEliminar);
     setListaNombres(nuevosNombres);
   };
 
@@ -27,6 +25,7 @@ export default function FormularioSimple() {
     <div>
       <form onSubmit={agregarNombre}>
         <input
+        autoComplete="off"
           name={nombre}
           type="text"
           value={nombre}
@@ -39,7 +38,7 @@ export default function FormularioSimple() {
       <ul style={{ listStyle: "none" }}>
         {listaNombres.map((nombre) => {
           return (
-            <li key={nombre} style={{marginBottom: "10px"}}>
+            <li key={nombre} style={{ marginBottom: "10px" }}>
               <button
                 style={{
                   color: "white",
