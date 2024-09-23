@@ -61,11 +61,11 @@ export default function Carrito() {
       </form>
 
       <ul>
-        {carrito.map((productos) => (
-          <li key={productos.nombre}>
-            <button onClick={() => QuitarProducto(productos)}>x</button>
-            Producto: {productos.nombre} <br />
-            Precio: $ {productos.precio} <br /> Cantidad: {productos.cantidad}
+        {carrito.map((producto) => (
+          <li key={producto.nombre}>
+            <button onClick={() => QuitarProducto(producto)}>x</button>
+            Producto: {producto.nombre} <br />
+            Precio: $ {producto.precio} <br /> Cantidad: {producto.cantidad}
           </li>
         ))}
       </ul>

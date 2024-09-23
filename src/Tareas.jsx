@@ -17,10 +17,8 @@ export default function TaskList() {
   const addTask = (event) => {
     event.preventDefault();
 
-    if (!lista.includes(task)) {
+    if (!lista.includes(task)) 
       setLista([...lista, task]);
-    } else return console.log("ya en la lista");
-
     setTask({
       tarea: "",
       isComplete: false,
@@ -49,7 +47,8 @@ export default function TaskList() {
       <ul>
         {lista.map((task) => {
           return (
-            <li key={task.tarea}>
+            <li  key={task.tarea}>
+              
               <button onClick={() => deleteTask(task)}>x</button>
               {task.tarea}
             </li>
