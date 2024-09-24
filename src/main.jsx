@@ -9,6 +9,7 @@ import Contactos from "./Contactos.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Contactos/>
+    
+    <TaskList />
   </StrictMode>
 );

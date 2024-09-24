@@ -49,8 +49,11 @@ export default function Contactos() {
       nombre: "",
       telefono: 0,
     });
+  };
 
-    const deleteContact = (e) => {}
+  const deleteContact = (deleteContact) => {
+    const newContacts = contacts.filter((contact) => contact !== deleteContact);
+    setContacts(newContacts);
   };
 
   return (
@@ -81,7 +84,13 @@ export default function Contactos() {
           <li key={contacto.telefono} style={{ listStyle: "none" }}>
             <input type="checkbox" value={contacto.name} />
             <label>
-              {contacto.nombre} - {contacto.telefono}
+              {contacto.nombre} - {contacto.telefono}{" "}
+              <button
+                onClick={() => deleteContact(contacto)}
+                style={{ marginLeft: "30px" }}
+              >
+                x
+              </button>
             </label>
           </li>
         ))}
